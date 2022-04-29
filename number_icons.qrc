@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../Pobrane/Numbers-1-icon.png</file>
+    </qresource>
+</RCC>
