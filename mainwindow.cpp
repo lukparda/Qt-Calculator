@@ -87,7 +87,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     case Qt::Key_X: case Qt::Key_Asterisk:
         ui->multiply->click();
         break;
-    case Qt::Key_Backslash:
+    case Qt::Key_Backslash: case Qt::Key_BackForward:
         ui->divide->click();
         break;
     case Qt::Key_Enter: case Qt::Key_Equal:

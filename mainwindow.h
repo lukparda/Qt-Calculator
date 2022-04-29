@@ -29,7 +29,6 @@ private slots:
     void on_equals_clicked();
     void on_Clear_clicked();
     void on_changeSign_clicked();
-
     void on_backspace_clicked();
 
 private:
