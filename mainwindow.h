@@ -41,7 +41,6 @@ private:
     QString _operator{};
 
     //status
-    bool _equalsClicked{false};
     bool _binaryOpClicked{false};
     bool _divide{false};
     bool _add{false};

@@ -94,7 +94,6 @@ void MainWindow::on_equals_clicked()
 
     _num1 = QString::number(_result);
     _num2.clear();
-    //_equalsClicked = true;
 }
 
 void MainWindow::digit_pressed()
