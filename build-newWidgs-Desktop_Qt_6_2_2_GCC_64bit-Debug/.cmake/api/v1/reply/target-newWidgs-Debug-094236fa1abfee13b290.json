@@ -1,0 +1,202 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libnewWidgs.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-fPIC"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "NEWWIDGS_LIBRARY"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_CORE_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug"
+				},
+				{
+					"path" : "/home/lukaszp/Calculator/newWidgs"
+				},
+				{
+					"backtrace" : 0,
+					"path" : "/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/newWidgs_autogen/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/lukaszp/Qt/6.2.2/gcc_64/include/QtCore"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/lukaszp/Qt/6.2.2/gcc_64/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/lukaszp/Qt/6.2.2/gcc_64/mkspecs/linux-g++"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "newWidgs_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "newWidgs_autogen::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "newWidgs::@6890427a1f51a3e7e1df",
+	"name" : "newWidgs",
+	"nameOnDisk" : "libnewWidgs.a",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				3
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/newWidgs_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "newwidgs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "newwidgs.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/newWidgs_autogen/timestamp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/newWidgs_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -7,7 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
     init();
 }
 
@@ -38,65 +37,6 @@ void MainWindow::init()
     connect(ui->multiply, &QPushButton::clicked, this, &MainWindow::binaryOp);
 
     ui->label->setText("0");
-}
-
-//method to type the numbers and operators directly from the keyboard
-void MainWindow::keyPressEvent(QKeyEvent *event)
-{
-    switch (event->key())
-    {
-    case Qt::Key_0:
-        ui->Button_0->click();
-        break;
-    case Qt::Key_1:
-        ui->Button_1->click();
-        break;
-    case Qt::Key_2:
-        ui->Button_2->click();
-        break;
-    case Qt::Key_3:
-        ui->Button_3->click();
-        break;
-    case Qt::Key_4:
-        ui->Button_4->click();
-        break;
-    case Qt::Key_5:
-        ui->Button_5->click();
-        break;
-    case Qt::Key_6:
-        ui->Button_6->click();
-        break;
-    case Qt::Key_7:
-        ui->Button_7->click();
-        break;
-    case Qt::Key_8:
-        ui->Button_8->click();
-        break;
-    case Qt::Key_9:
-        ui->Button_9->click();
-        break;
-    case Qt::Key_Comma: case Qt::Key_Period:
-        ui->comma->click();
-        break;
-    case Qt::Key_Plus:
-        ui->add->click();
-        break;
-    case Qt::Key_Minus:
-        ui->subtract->click();
-        break;
-    case Qt::Key_X: case Qt::Key_Asterisk:
-        ui->multiply->click();
-        break;
-    case Qt::Key_Backslash: case Qt::Key_BackForward:
-        ui->divide->click();
-        break;
-    case Qt::Key_Enter: case Qt::Key_Equal:
-        ui->equals->click();
-        break;
-    case Qt::Key_Backspace:
-        ui->backspace->click();
-    default: break;
-    }
 }
 
 void MainWindow::on_percentage_clicked()
@@ -154,7 +94,7 @@ void MainWindow::on_equals_clicked()
 
     _num1 = QString::number(_result);
     _num2.clear();
-    _equalsClicked = true;
+    //_equalsClicked = true;
 }
 
 void MainWindow::digit_pressed()
@@ -223,6 +163,65 @@ void MainWindow::on_backspace_clicked()
 {
     QString _changeTxt = ui->label->text();
     _changeTxt.chop(1);
+    _binaryOpClicked ? _num2 = _changeTxt : _num1 = _changeTxt;
     ui->label->setText(_changeTxt);
 }
 
+//method to type the numbers and operators directly from the keyboard
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    switch (event->key())
+    {
+    case Qt::Key_0:
+        ui->Button_0->animateClick();
+        break;
+    case Qt::Key_1:
+        ui->Button_1->animateClick();
+        break;
+    case Qt::Key_2:
+        ui->Button_2->animateClick();
+        break;
+    case Qt::Key_3:
+        ui->Button_3->animateClick();
+        break;
+    case Qt::Key_4:
+        ui->Button_4->animateClick();
+        break;
+    case Qt::Key_5:
+        ui->Button_5->animateClick();
+        break;
+    case Qt::Key_6:
+        ui->Button_6->animateClick();
+        break;
+    case Qt::Key_7:
+        ui->Button_7->animateClick();
+        break;
+    case Qt::Key_8:
+        ui->Button_8->animateClick();
+        break;
+    case Qt::Key_9:
+        ui->Button_9->animateClick();
+        break;
+    case Qt::Key_Comma: case Qt::Key_Period:
+        ui->comma->animateClick();
+        break;
+    case Qt::Key_Plus:
+        ui->add->animateClick();
+        break;
+    case Qt::Key_Minus:
+        ui->subtract->animateClick();
+        break;
+    case Qt::Key_Asterisk:
+        ui->multiply->animateClick();
+        break;
+    case Qt::Key_Slash:
+        ui->divide->animateClick();
+        break;
+    case Qt::Key_Enter: case Qt::Key_Equal:
+        ui->equals->animateClick();
+        break;
+    case Qt::Key_Backspace:
+        ui->backspace->animateClick();
+    default: break;
+    }
+}

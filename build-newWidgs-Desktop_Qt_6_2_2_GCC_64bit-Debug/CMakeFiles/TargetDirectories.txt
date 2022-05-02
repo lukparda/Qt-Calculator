@@ -1,0 +1,5 @@
+/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/CMakeFiles/newWidgs.dir
+/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/CMakeFiles/newWidgs_autogen_timestamp_deps.dir
+/home/lukaszp/Calculator/build-newWidgs-Desktop_Qt_6_2_2_GCC_64bit-Debug/CMakeFiles/newWidgs_autogen.dir
