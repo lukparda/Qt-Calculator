@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QString>
+#include <QChar>
 #include <QKeyEvent>
 #include <QDebug>
 
@@ -46,6 +47,7 @@ private:
     bool _add{false};
     bool _subtract{false};
     bool _multiply{false};
+    bool _checked{false};
 
 };
 #endif // MAINWINDOW_H

@@ -46,7 +46,7 @@ void MainWindow::on_percentage_clicked()
 
     _val = ui->label->text().toDouble();
     _val *= .01;
-    _name = QString::number(_val,'g',15);
+    _name = QString::number(_val,'g',5);
     ui->label->setText(_name);
 }
 
@@ -60,27 +60,27 @@ void MainWindow::on_equals_clicked()
     double _result{0.0};
     double _secondNum = ui->label->text().toDouble(); //catch the number entered after an operation button is pressed/clicked
 
-    if(_add || _subtract || _multiply || _divide)
-    {
-        if(_add)
+
+
+        if(_operator == '+')
         {
             qDebug() << "add equation";
             _result = _dob1 + _secondNum;
             _add = false;
         }
-        else if(_subtract)
+        else if(_operator == '-')
         {
             qDebug() << "subtraction";
             _result = _dob1 - _secondNum;
             _subtract = false;
         }
-        else if(_multiply)
+        else if(_operator == 'x')
         {
             qDebug() << "multiplication";
             _result = _dob1 * _secondNum;
             _multiply = false;
         }
-        else if(_divide)
+        else if(_operator == '/')
         {
             qDebug() << "division";
             if(_secondNum == 0.0){return;}
@@ -88,7 +88,7 @@ void MainWindow::on_equals_clicked()
             _result = _dob1 / _secondNum;
             _divide = false;
         }
-    }
+
 
     ui->label->setText(QString::number(_result));
 
@@ -132,10 +132,10 @@ void MainWindow::binaryOp()
     _dob1 = ui->label->text().toDouble();
 
     //save the operator clicked and use it in onEqualsClicked method
-    if(_operator == "+")        {_add = true;}
-    else if(_operator == "-")   {_subtract = true;}
-    else if(_operator == "x")   {_multiply = true;}
-    else                        {_divide = true;}
+    if(_operator == '+')        {_add = true;}
+    else if(_operator == '-')   {_subtract = true;}
+    else if(_operator == 'x')   {_multiply = true;}
+    else if(_operator == '/')   {_divide = true;}
 
     _binaryOpClicked = true;
 }
