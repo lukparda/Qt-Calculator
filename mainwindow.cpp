@@ -57,38 +57,35 @@ void MainWindow::on_equals_clicked()
     //convert QStrings into doubles and do the calculations
     _dob1 = _num1.toDouble();
     _dob2 = _num2.toDouble();
-    double _result{0.0};
+    double _result{.0};
     double _secondNum = ui->label->text().toDouble(); //catch the number entered after an operation button is pressed/clicked
 
+    if(_operator == '+')
+    {
+        qDebug() << "addition";
+        _result = _dob1 + _secondNum;
+        _add = false;
+    }
+    else if(_operator == '-')
+    {
+        qDebug() << "subtraction";
+        _result = _dob1 - _secondNum;
+        _subtract = false;
+    }
+    else if(_operator == 'x')
+    {
+        qDebug() << "multiplication";
+        _result = _dob1 * _secondNum;
+        _multiply = false;
+    }
+    else if(_operator == '/')
+    {
+        qDebug() << "division";
+        if(_secondNum == 0.0){return;}
 
-
-        if(_operator == '+')
-        {
-            qDebug() << "add equation";
-            _result = _dob1 + _secondNum;
-            _add = false;
-        }
-        else if(_operator == '-')
-        {
-            qDebug() << "subtraction";
-            _result = _dob1 - _secondNum;
-            _subtract = false;
-        }
-        else if(_operator == 'x')
-        {
-            qDebug() << "multiplication";
-            _result = _dob1 * _secondNum;
-            _multiply = false;
-        }
-        else if(_operator == '/')
-        {
-            qDebug() << "division";
-            if(_secondNum == 0.0){return;}
-
-            _result = _dob1 / _secondNum;
-            _divide = false;
-        }
-
+        _result = _dob1 / _secondNum;
+        _divide = false;
+    }
 
     ui->label->setText(QString::number(_result));
 
@@ -130,12 +127,6 @@ void MainWindow::binaryOp()
     Q_ASSERT(button != nullptr);
     _operator = button->text();
     _dob1 = ui->label->text().toDouble();
-
-    //save the operator clicked and use it in onEqualsClicked method
-    if(_operator == '+')        {_add = true;}
-    else if(_operator == '-')   {_subtract = true;}
-    else if(_operator == 'x')   {_multiply = true;}
-    else if(_operator == '/')   {_divide = true;}
 
     _binaryOpClicked = true;
 }

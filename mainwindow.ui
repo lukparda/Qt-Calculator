@@ -20,7 +20,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="number_icons.qrc">
+    <normaloff>:/Pobrane/Numbers-1-icon.png</normaloff>:/Pobrane/Numbers-1-icon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">color:black;</string>
@@ -836,6 +840,8 @@ color: black;}</string>
   <tabstop>divide</tabstop>
   <tabstop>Button_7</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="number_icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
